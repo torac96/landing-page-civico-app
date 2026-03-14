@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Privacy Policy - Civico App"
+  description="Informativa sulla privacy di Civico App - Come gestiamo i tuoi dati personali"
+>
+  <Navbar />
+
+  <section class="legal-page">
+    <div class="container legal-container">
+      <h1>Informativa sulla Privacy</h1>
+      <p class="last-updated">Ultimo aggiornamento: 14 Marzo 2026</p>
+
+      <div class="legal-content">
+        <h2>1. Introduzione</h2>
+        <p>
+          Civico App ("noi", "ci", "nostro") rispetta la tua privacy e si impegna a proteggere i tuoi dati personali.
+          Questa informativa ti spiega come raccogliamo, utilizziamo e proteggiamo le tue informazioni
+          quando utilizzi la nostra applicazione mobile Civico App ("l'App"), disponibile su iOS e Android.
+        </p>
+
+        <h2>2. Titolare del Trattamento</h2>
+        <div class="contact-box">
+          <p><strong>Email:</strong> <a href="mailto:support@civico-app.com">support@civico-app.com</a></p>
+        </div>
+
+        <h2>3. Dati che Raccogliamo</h2>
+
+        <h3>3.1 Dati forniti dall'utente</h3>
+        <p>Quando crei un account o utilizzi l'App, raccogliamo:</p>
+        <ul>
+          <li><strong>Nome e cognome</strong></li>
+          <li><strong>Indirizzo email</strong></li>
+          <li><strong>Dati sulle scadenze personali:</strong> tipo di documento (es. carta d'identità, passaporto), data di scadenza</li>
+          <li><strong>Token di notifica push:</strong> identificativo univoco del tuo dispositivo per l'invio di notifiche</li>
+        </ul>
+        <p>
+          Questi dati sono archiviati in modo sicuro su server cloud (Supabase, con infrastruttura AWS/EU).
+        </p>
+
+        <h3>3.2 Dati raccolti automaticamente</h3>
+        <ul>
+          <li><strong>Dati tecnici:</strong> tipo di dispositivo, sistema operativo, versione dell'app</li>
+          <li><strong>Log tecnici</strong> per la risoluzione di problemi</li>
+          <li><strong>Dati anonimi di utilizzo</strong> (solo se attivi nelle impostazioni del dispositivo)</li>
+        </ul>
+
+        <h2>4. Come Utilizziamo i Tuoi Dati</h2>
+        <p>Utilizziamo i dati per:</p>
+        <ul>
+          <li>Fornirti le funzionalità dell'App (gestione scadenze documenti, notizie, servizi comunali, link utili)</li>
+          <li>Inviarti notifiche push sulle scadenze dei tuoi documenti (se autorizzate)</li>
+          <li>Migliorare l'App e risolvere problemi tecnici</li>
+          <li>Gestire il tuo account</li>
+        </ul>
+
+        <h2>5. Condivisione dei Dati</h2>
+        <p>
+          <strong>Non vendiamo né cediamo i tuoi dati personali a terzi per scopi commerciali.</strong>
+        </p>
+        <p>Condividiamo dati solo con i seguenti sub-processori, strettamente necessari al funzionamento dell'App:</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Fornitore</th>
+                <th>Scopo</th>
+                <th>Sede</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Supabase Inc.</td>
+                <td>Database e archiviazione cloud</td>
+                <td>USA (EU via AWS EU)</td>
+              </tr>
+              <tr>
+                <td>Expo / Apple / Google</td>
+                <td>Invio notifiche push</td>
+                <td>USA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Tutti i trasferimenti verso paesi terzi avvengono nel rispetto del GDPR
+          (Standard Contractual Clauses o meccanismi equivalenti).
+        </p>
+
+        <h2>6. Conservazione dei Dati</h2>
+        <p>
+          I tuoi dati sono conservati per tutto il tempo in cui mantieni un account attivo.
+          Puoi richiedere la cancellazione in qualsiasi momento (vedi sezione 8).
+          I dati vengono eliminati entro 30 giorni dalla richiesta.
+        </p>
+
+        <h2>7. Sicurezza dei Dati</h2>
+        <p>Adottiamo misure tecniche e organizzative appropriate, tra cui:</p>
+        <ul>
+          <li>Connessioni crittografate (HTTPS/TLS)</li>
+          <li>Archiviazione sicura su infrastruttura Supabase</li>
+          <li>Hashing delle password (mai salvate in chiaro)</li>
+          <li>Accesso ai dati limitato al personale autorizzato</li>
+        </ul>
+
+        <h2>8. I Tuoi Diritti (GDPR)</h2>
+        <p>Ai sensi del GDPR hai diritto di:</p>
+        <ul>
+          <li><strong>Accesso:</strong> visualizzare i dati salvati nel tuo profilo direttamente dall'App</li>
+          <li><strong>Rettifica:</strong> modificare i tuoi dati in qualsiasi momento</li>
+          <li><strong>Cancellazione:</strong> eliminare il tuo account e tutti i dati associati</li>
+          <li><strong>Portabilità:</strong> richiedere una copia dei tuoi dati in formato leggibile</li>
+          <li><strong>Opposizione:</strong> opporsi al trattamento per interesse legittimo</li>
+          <li><strong>Revoca del consenso:</strong> disattivare le notifiche push nelle impostazioni del dispositivo in qualsiasi momento</li>
+        </ul>
+        <p>Per esercitare questi diritti: <a href="mailto:support@civico-app.com">support@civico-app.com</a></p>
+
+        <h2>9. Notifiche Push</h2>
+        <p>
+          L'App utilizza notifiche push (tramite Expo) per avvisarti delle scadenze dei documenti.
+          Il token push del tuo dispositivo viene salvato sul nostro server per consentire l'invio.
+          Puoi revocare il consenso nelle impostazioni del dispositivo; il token verrà rimosso alla successiva sincronizzazione.
+        </p>
+
+        <h2>10. Privacy dei Minori</h2>
+        <p>
+          L'App non è destinata a minori di 16 anni (limite GDPR per consenso digitale in Italia).
+          Non raccogliamo consapevolmente dati di minorenni.
+        </p>
+
+        <h2>11. Base Giuridica per il Trattamento (GDPR)</h2>
+        <ul>
+          <li><strong>Esecuzione del contratto (art. 6.1.b):</strong> creazione e gestione dell'account, funzionalità principali dell'App</li>
+          <li><strong>Consenso (art. 6.1.a):</strong> notifiche push</li>
+          <li><strong>Interesse legittimo (art. 6.1.f):</strong> sicurezza, miglioramento dell'App, risoluzione bug</li>
+        </ul>
+
+        <h2>12. Modifiche a Questa Informativa</h2>
+        <p>
+          Eventuali modifiche saranno comunicate tramite notifica nell'App o via email.
+          La data di "Ultimo aggiornamento" in cima indica la versione vigente.
+        </p>
+
+        <h2>13. Autorità di Controllo</h2>
+        <p>
+          Puoi presentare reclamo al Garante per la protezione dei dati personali:
+          <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>
+        </p>
+
+        <h2>14. Contatti</h2>
+        <div class="contact-box">
+          <p><strong>Email:</strong> <a href="mailto:support@civico-app.com">support@civico-app.com</a></p>
+          <p><strong>Supporto:</strong> <a href={`${base}supporto`}>Vai alla pagina di supporto</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

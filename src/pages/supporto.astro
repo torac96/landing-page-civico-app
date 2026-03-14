@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import FaqItem from '../components/FaqItem.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Supporto - Civico App"
+  description="Centro assistenza Civico App - FAQ e supporto tecnico"
+>
+  <Navbar />
+
+  <section class="support-hero">
+    <div class="container">
+      <h1>Centro Assistenza</h1>
+      <p>Siamo qui per aiutarti. Trova risposte alle domande frequenti o contattaci direttamente.</p>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">Domande Frequenti</h2>
+
+      <div class="faq-grid">
+        <div class="faq-category">
+          <h3>📱 Utilizzo Base</h3>
+
+          <FaqItem question="Come aggiungo un nuovo documento?">
+            <p>Per aggiungere un documento:</p>
+            <ol>
+              <li>Vai nella sezione <strong>"Scadenze"</strong> dalla barra di navigazione in basso</li>
+              <li>Clicca sul pulsante <strong>"+ Crea Nuova Scadenza"</strong></li>
+              <li>Seleziona il tipo di documento (Passaporto, Carta d'Identità, etc.)</li>
+              <li>Inserisci la data di scadenza</li>
+              <li>Aggiungi note opzionali</li>
+              <li>Salva</li>
+            </ol>
+          </FaqItem>
+
+          <FaqItem question="Come funzionano le notifiche?">
+            <p>Civico App ti invia automaticamente una notifica push <strong>30 giorni prima</strong> della scadenza di ogni documento registrato.</p>
+            <p>Per ricevere le notifiche, assicurati di:</p>
+            <ul>
+              <li>Aver autorizzato le notifiche quando richiesto al primo avvio dell'app</li>
+              <li>Controllare che le notifiche siano abilitate nelle impostazioni del dispositivo (<strong>iOS:</strong> Impostazioni &gt; Notifiche &gt; Civico App | <strong>Android:</strong> Impostazioni &gt; App &gt; Civico App &gt; Notifiche)</li>
+            </ul>
+          </FaqItem>
+
+          <FaqItem question="Posso modificare o eliminare un documento?">
+            <p><strong>Per modificare:</strong></p>
+            <ul>
+              <li>Nella lista scadenze, clicca sull'icona <strong>matita (✏️)</strong> accanto al documento</li>
+              <li>Modifica i campi desiderati</li>
+              <li>Salva le modifiche</li>
+            </ul>
+            <p><strong>Per eliminare:</strong></p>
+            <ul>
+              <li>Clicca sull'icona <strong>cestino (🗑️)</strong> accanto al documento</li>
+              <li>Conferma l'eliminazione</li>
+            </ul>
+          </FaqItem>
+        </div>
+
+        <div class="faq-category">
+          <h3>🇮🇹 Cittadinanza</h3>
+
+          <FaqItem question="Come accedo alle guide per la cittadinanza?">
+            <p>Per accedere alle guide complete:</p>
+            <ol>
+              <li>Vai nella sezione <strong>"Servizi"</strong> dalla barra di navigazione</li>
+              <li>Seleziona <strong>"Cittadinanza Italiana"</strong></li>
+              <li>Troverai guide dettagliate su:
+                <ul>
+                  <li>Requisiti necessari</li>
+                  <li>Documenti da presentare</li>
+                  <li>Procedura passo-passo</li>
+                  <li>Tempi di attesa</li>
+                  <li>Costi e tasse</li>
+                </ul>
+              </li>
+            </ol>
+          </FaqItem>
+
+          <FaqItem question="Le informazioni sulla cittadinanza sono aggiornate?">
+            <p>Sì, aggiorniamo regolarmente le guide con le ultime modifiche normative. Tuttavia, per informazioni ufficiali ti consigliamo sempre di verificare con:</p>
+            <ul>
+              <li>Il tuo comune di residenza</li>
+              <li>Il sito del Ministero dell'Interno</li>
+              <li>Un consulente legale specializzato</li>
+            </ul>
+          </FaqItem>
+
+          <FaqItem question="Civico fornisce assistenza legale?">
+            <p><strong>No</strong>, Civico App è uno strumento informativo e organizzativo. Non forniamo consulenza legale.</p>
+            <p>Per questioni legali specifiche, ti consigliamo di consultare un avvocato specializzato in diritto dell'immigrazione.</p>
+          </FaqItem>
+        </div>
+
+        <div class="faq-category">
+          <h3>🔧 Problemi Tecnici</h3>
+
+          <FaqItem question="Non ricevo le notifiche, cosa faccio?">
+            <p>Se non ricevi notifiche, prova questi passaggi:</p>
+            <ol>
+              <li><strong>iOS:</strong> Impostazioni &gt; Notifiche &gt; Civico App &gt; attiva "Consenti notifiche"</li>
+              <li><strong>Android:</strong> Impostazioni &gt; App &gt; Civico App &gt; Notifiche &gt; attiva le notifiche</li>
+              <li>Assicurati che "Consenti notifiche" sia attivato</li>
+              <li>Verifica che il documento abbia una scadenza impostata correttamente</li>
+              <li>Controlla di essere entro i 30 giorni dalla scadenza</li>
+              <li>Riavvia l'app</li>
+            </ol>
+            <p>Se il problema persiste, contattaci.</p>
+          </FaqItem>
+
+          <FaqItem question="L'app si blocca o crasha, come risolvo?">
+            <p>Prova queste soluzioni:</p>
+            <ol>
+              <li><strong>Chiudi e riapri l'app</strong></li>
+              <li><strong>Riavvia il dispositivo</strong></li>
+              <li><strong>Verifica di avere l'ultima versione</strong> dell'app (App Store o Google Play)</li>
+              <li><strong>Assicurati di avere il sistema operativo aggiornato</strong> alla versione più recente</li>
+              <li>Se il problema continua, <strong>disinstalla e reinstalla l'app</strong> (i dati locali verranno persi)</li>
+            </ol>
+            <p>Se nessuna di queste soluzioni funziona, contattaci con dettagli sul problema.</p>
+          </FaqItem>
+
+          <FaqItem question="Come aggiorno l'app?">
+            <p><strong>iOS (App Store):</strong></p>
+            <ol>
+              <li>Apri l'<strong>App Store</strong></li>
+              <li>Clicca sulla tua foto profilo in alto a destra</li>
+              <li>Scorri fino a "Aggiornamenti disponibili" e aggiorna Civico App</li>
+            </ol>
+            <p>Oppure attiva gli aggiornamenti automatici in <strong>Impostazioni &gt; App Store &gt; Aggiornamenti app</strong></p>
+            <p><strong>Android (Google Play):</strong></p>
+            <ol>
+              <li>Apri il <strong>Google Play Store</strong></li>
+              <li>Tocca l'icona del profilo in alto a destra</li>
+              <li>Vai su "Gestisci app e dispositivo" e aggiorna Civico App</li>
+            </ol>
+          </FaqItem>
+        </div>
+
+        <div class="faq-category">
+          <h3>🔒 Privacy e Sicurezza</h3>
+
+          <FaqItem question="I miei dati sono al sicuro?">
+            <p>Sì! I dati che inserisci in Civico App sono archiviati in modo sicuro su server cloud (Supabase) con connessioni crittografate (HTTPS/TLS) e password mai salvate in chiaro.</p>
+            <p>Non vendiamo né cediamo i tuoi dati personali a terzi. Per maggiori dettagli, consulta la nostra <a href={`${base}privacy`}>Privacy Policy</a>.</p>
+          </FaqItem>
+
+          <FaqItem question="Cosa succede se elimino il mio account?">
+            <p>Puoi richiedere la cancellazione dell'account e di tutti i dati associati in qualsiasi momento scrivendo a <a href="mailto:support@civico-app.com">support@civico-app.com</a>.</p>
+            <p>I dati vengono eliminati entro 30 giorni dalla richiesta.</p>
+          </FaqItem>
+
+          <FaqItem question="L'app è gratuita?">
+            <p>Sì! Civico App è <strong>completamente gratuita</strong> e senza pubblicità.</p>
+            <p>Non ci sono costi nascosti, acquisti in-app o abbonamenti.</p>
+          </FaqItem>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Non trovi la risposta?</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Contattaci Direttamente</h3>
+          <p>Il nostro team è pronto ad aiutarti. Rispondiamo generalmente entro 24-48 ore.</p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="method-icon">📧</div>
+              <div class="method-details">
+                <h4>Email</h4>
+                <a href="mailto:support@civico-app.com">support@civico-app.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="response-time">
+            <p><strong>⏱️ Tempo di risposta:</strong> 24-48 ore (giorni lavorativi)</p>
+          </div>
+        </div>
+
+        <div class="contact-tips">
+          <h3>💡 Per ricevere assistenza più velocemente</h3>
+          <p>Quando ci contatti, includi:</p>
+          <ul>
+            <li>Modello del tuo dispositivo (es. iPhone 14, Samsung Galaxy S23)</li>
+            <li>Sistema operativo e versione (iOS o Android)</li>
+            <li>Versione dell'app Civico App (visibile in-app)</li>
+            <li>Descrizione dettagliata del problema</li>
+            <li>Screenshot se possibile (molto utili!)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feedback-section">
+    <div class="container">
+      <div class="feedback-box">
+        <h3>💬 Hai suggerimenti per migliorare Civico App?</h3>
+        <p>Siamo sempre aperti a feedback e idee per nuove funzionalità. Scrivici a <a href="mailto:support@civico-app.com">support@civico-app.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

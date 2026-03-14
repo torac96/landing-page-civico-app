@@ -570,7 +570,7 @@ a.logo {
 }
 
 .last-updated {
-    color: var(--text-light);
+    color: var(--text-medium);
     font-size: 0.95rem;
     margin-bottom: var(--space-lg);
 }

@@ -9,7 +9,7 @@ export interface Props {
 
 const { title, description, ogImage = '/assets/favicon.png' } = Astro.props;
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 const ogImageAbsolute = new URL(base.replace(/\/$/, '') + ogImage, Astro.site).toString();
 ---
@@ -46,6 +46,31 @@ const ogImageAbsolute = new URL(base.replace(/\/$/, '') + ogImage, Astro.site).t
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="256x256" href={`${base}assets/favicon.png`} />
+
+    <!-- Font face declarations with correct base path -->
+    <style set:html={`
+      @font-face {
+        font-family: 'DM Serif Display';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('${base}fonts/dm-serif-display-normal.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'DM Serif Display';
+        font-style: italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url('${base}fonts/dm-serif-display-italic.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 400 600;
+        font-display: swap;
+        src: url('${base}fonts/work-sans-400.woff2') format('woff2');
+      }
+    `} />
   </head>
   <body>
     <slot />

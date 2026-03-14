@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import logoSrc from '../assets/logo.png';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
@@ -7,7 +9,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     <div class="footer-content">
       <div class="footer-section">
         <a href={base} class="logo" style="margin-bottom: 0.75rem; display: inline-flex;">
-          <img src={`${base}assets/logo.png`} alt="" class="logo-img" width="44" height="44" />
+          <Image src={logoSrc} alt="" class="logo-img" width={44} height={44} format="webp" quality={85} />
           Civico App
         </a>
         <p>Il tuo assistente per documenti e cittadinanza italiana.</p>

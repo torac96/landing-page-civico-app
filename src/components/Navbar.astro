@@ -1,11 +1,13 @@
 ---
+import { Image } from 'astro:assets';
+import logoSrc from '../assets/logo.png';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
 <nav class="navbar">
   <div class="container">
     <a href={base} class="logo">
-      <img src={`${base}assets/logo.png`} alt="" class="logo-img" width="44" height="44" />
+      <Image src={logoSrc} alt="" class="logo-img" width={44} height={44} format="webp" quality={85} />
       Civico App
     </a>
     <div class="nav-links">

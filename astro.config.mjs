@@ -3,9 +3,8 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  // site e base vengono passati dal workflow GitHub Actions via --site e --base
-  // in locale non servono, le immagini funzionano su http://localhost:4321/
   site: 'https://torac96.github.io',
+  base: '/landing-page-civico-app',
   output: 'static',
   integrations: [
     sitemap(),

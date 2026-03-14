@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://torac96.github.io',
-  base: '/landing-page-civico-app',
+  base: '/landing-page-civico-app/',
   output: 'static',
   integrations: [
     sitemap(),

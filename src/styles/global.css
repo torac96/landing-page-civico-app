@@ -70,6 +70,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Anchor link offset for sticky navbar */
+h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
+    scroll-margin-top: 100px;
+}
+
 body {
     font-family: var(--font-body);
     color: var(--text-dark);
